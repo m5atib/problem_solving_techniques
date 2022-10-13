@@ -30,10 +30,10 @@ typedef map<string, string> mpss;
 typedef map<int, string> mpis;
 typedef map<char, int> mpci;
 
-#define IOS                                   \
-            ios_base::sync_with_stdio(false); \
-            cin.tie(NULL);                    \
-            cout.tie(NULL)
+#define IOS                           \
+    ios_base::sync_with_stdio(false); \
+    cin.tie(NULL);                    \
+    cout.tie(NULL)
 #define pq priority_queue
 #define F first
 #define S second
@@ -45,13 +45,13 @@ typedef map<char, int> mpci;
 #define VPTR(it, v) for (auto it = v.begin(); it != v.end(); ++it)
 #define SQ(a) (a) * (a)
 #define CUBE(a) (a) * (a) * (a)
-#define printMap(elem)                                           \
-            for (auto it = elem.begin(); it != elem.end(); it++) \
-            cout << it->first << "[" << it->second << "]\t"
-#define printVec(v)             \
-            VPTR(it, v)         \
-            cout << *it << " "; \
-            cout << endl
+#define printMap(elem)                                   \
+    for (auto it = elem.begin(); it != elem.end(); it++) \
+    cout << it->first << "[" << it->second << "]\t"
+#define printVec(v)     \
+    VPTR(it, v)         \
+    cout << *it << " "; \
+    cout << endl
 
 #define rVPTR(it, d) for (auto it = d.rbegin(); it != d.rend(); ++it)
 #define fibo(n) (pow((1 + sqrt(5)), n) - pow((1 - sqrt(5)), n)) / (pow(2, n) * sqrt(5))
@@ -65,14 +65,14 @@ typedef map<char, int> mpci;
 #define pqi pq<int>
 #define summation(n) (((n) * ((n) + 1)) / 2)
 #define bits bitset<10>
-#define printArr(arr, n)                            \
-            rep(i, 0, n - 1) cout << arr[i] << " "; \
-            cout << endl
+#define printArr(arr, n)                    \
+    rep(i, 0, n - 1) cout << arr[i] << " "; \
+    cout << endl
 #define mod10p9 1000000007;
 
 int main()
 {
-            IOS;
-            freopen("input.txt", "r", stdin);
-            cout << "Hello, World!" << endl;
+    IOS;
+    freopen("input.txt", "r", stdin);
+    cout << "Hello, World!" << endl;
 }
