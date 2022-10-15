@@ -27,6 +27,8 @@ const iterativePower = (x , n) => {
     } 
     return result
 }
+
+//U CAN USE THE MOD 10^9 + 7 IF U WANT THAT 
 console.log(fastPower(3,10));
 console.log("   _____________________   ")
 //console.log(iterativePower(3,204));
