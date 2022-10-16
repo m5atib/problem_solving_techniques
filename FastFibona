@@ -1,0 +1,52 @@
+
+function convertToBinary(x) {
+    let bin = 0;
+    let rem, i = 1, step = 1;
+    while (x != 0) {
+        rem = x % 2;
+        x = parseInt(x / 2);
+        bin = bin + rem * i;
+        i = i * 10;
+    }
+    // let myArr = Array.from(String(bin).split(""));
+    return bin.toString();
+}
+ 
+function decimal_to_bin(n)
+{
+    let bin = convertToBinary(n);
+    let loc = bin.indexOf('1');
+    if (loc != -1)
+        return bin.substring(loc);
+    return "0";
+}
+ 
+function fastfib(n)
+{
+    let bin_of_n = decimal_to_bin(n); // binary string of n
+ 
+    let f = [0, 1]; // [F(i), F(i+1)] => i=0
+ 
+    for(let i = 0; i < bin_of_n.length; i++){
+        let b = bin_of_n[i];
+        let f2i1 = f[1] * f[1] + f[0] * f[0]; // F(2i+1)
+        let f2i = f[0] * (2 * f[1] - f[0]); // F(2i)
+ 
+        if (b == '0') {
+            f[0] = f2i; // F(2i)
+            f[1] = f2i1; // F(2i+1)
+        }
+        else {
+            f[0] = f2i1; // F(2i+1)
+            f[1] = f2i1 + f2i; // F(2i+2)
+        }
+    }
+ 
+    return f[0];
+}
+//so the time complexity is O(log n)
+let n = 9;
+
+for (let i = 0; i <= 12341; i++){
+    console.log("F(",i,") =", fastfib(i));
+}

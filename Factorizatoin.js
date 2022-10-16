@@ -1,3 +1,4 @@
+// it takes O(sqrt(n)) time to get the factors from 1 to n
 const fastFactors = (n) => {
   let factors = {};
 

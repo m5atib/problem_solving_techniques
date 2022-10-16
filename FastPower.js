@@ -7,13 +7,11 @@ const fastPower = (x, n) => {
         if (power % 2 == 0){
             power = Math.floor(power/2);
             base = base * base
-            console.log("even fastPower")
         }else{
             power = power - 1
             result = result * base
             power = Math.floor(power/2);
             base = base * base
-            console.log("odd fastPower")
 
         }
     }
