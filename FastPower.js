@@ -7,13 +7,11 @@ const fastPower = (x, n) => {
         if (power % 2 == 0){
             power = Math.floor(power/2);
             base = base * base
-            console.log("even fastPower")
         }else{
             power = power - 1
             result = result * base
             power = Math.floor(power/2);
             base = base * base
-            console.log("odd fastPower")
 
         }
     }
@@ -27,6 +25,8 @@ const iterativePower = (x , n) => {
     } 
     return result
 }
+
+//U CAN USE THE MOD 10^9 + 7 IF U WANT THAT 
 console.log(fastPower(3,10));
 console.log("   _____________________   ")
 //console.log(iterativePower(3,204));
